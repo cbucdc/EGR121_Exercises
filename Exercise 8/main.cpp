@@ -11,7 +11,7 @@ int main(){
 	// cast the user-entered int to a char (look up ASCII table)
 	c = static_cast<char>(i);
 	cout << c << endl;
-	// print out an offset from the user entered char
+	// print out a char offset from the user entered char
 	cout << static_cast<char>(c+32) << endl;
 	return 0;
 	
