@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-int main(){
+int main() {
 	// initialize variables
 	int i;
 	char c;
@@ -10,9 +10,9 @@ int main(){
 	cin >> i;
 	// cast the user-entered int to a char (look up ASCII table)
 	c = static_cast<char>(i);
-	cout << c << endl;
+	cout << "Uppercase: " << c << endl;
 	// print out a char offset from the user entered char
-	cout << static_cast<char>(c+32) << endl;
+	cout << "Lowercase: " << static_cast<char>(c + 32) << endl;
 	return 0;
-	
+
 }
