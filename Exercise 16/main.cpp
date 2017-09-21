@@ -2,27 +2,19 @@
 
 using namespace std;
 int main() {
-	int n = 1;
-	while (n > 0) {
-
-		cout << "Enter a positive integer or zero to stop: ";
-		cin >> n;
-		// loop over height of figure
-		for (int i = n; i >= 1; i--)
-		{
-			// print out the whitespace on the left of each line
-			for (int j = 0; j < n - i; j++)
-			{
-				cout << "  ";
-			}
-			// print out the asterisks on the right
-			for (int j = 0; j < i; j++)
-			{
-				cout << "* ";
-			}
-			cout << endl;
+	int n;
+	int i = -20;
+	int sum = 0;
+	cin >> n;
+	cout << "Here are the numbers evenly divisible by " << n << ": ";
+	while (i <= 40) {
+		if (i % n == 0) {
+			sum += i;
+			cout << i << " ";
 		}
+		i++;
 	}
+	cout << endl << "Their sum is: " << sum << endl;
 	return 0;
 
 }
