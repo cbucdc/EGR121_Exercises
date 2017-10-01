@@ -7,28 +7,31 @@ using namespace std;
 int main() {
 
 	// initialize variables
-	int numItems;
-	float purchasePrice;
-	float salesTax;
-	float shipCost;
-	cout << fixed << setprecision(2);
-	cout << "Enter the number of items: ";
-	cin >> numItems;
-	cout << endl << "Enter the purchase price: $";
-	cin >> purchasePrice ;
-	salesTax = purchasePrice * 0.08;
-	if (numItems < 6) {
-		shipCost = purchasePrice * 0.05;
+	char gradeLetter;
+	cout << fixed << setprecision(1);
+	cout << "Enter the letter grade: ";
+	cin >> gradeLetter;
+	float grade = 0;
+	switch (gradeLetter) {
+	case 'F':
+		grade = 0;
+		break;
+	case 'D':
+		grade = 1;
+		break;
+	case 'C':
+		grade = 2;
+		break;
+	case 'B':
+		grade = 3;
+		break;
+	case 'A':
+		grade = 4;
+		break;
+	default:
+		cout << "Invalid grade" << endl;
+		return 0;
 	}
-	else if ( numItems < 11) {
-		shipCost = purchasePrice * 0.025;
-	}
-	else {
-		shipCost = 0;
-	}
-	cout << endl <<"Sales tax: $" << salesTax << endl;
-	cout << "Shipping cost: $" << shipCost << endl;
-	cout << "Total cost: $" << purchasePrice + shipCost + salesTax << endl;
-
+	cout << "Grade point per unit: " << grade << endl;
 	return 0;
 }

@@ -1,3 +1,4 @@
+// Exercise Set 16(1).docx
 #include <iostream>
 
 using namespace std;
@@ -8,25 +9,19 @@ int main() {
 		cout << "Enter a positive integer or zero to stop: ";
 		cin >> n;
 		// loop over height of figure
-		int i = n;
-		while ( i >= 1)
+		for (int i = n; i >= 1; i--)
 		{
 			// print out the whitespace on the left of each line
-			int j = 0;
-			while ( j < n - i)
+			for (int j = 0; j < n - i; j ++)
 			{
 				cout << "  ";
-				j++;
 			}
 			// print out the asterisks on the right
-			j = 0;
-			while ( j < i)
+			for (int j = 0; j < i; j ++)
 			{
 				cout << "* ";
-				j++;
 			}
 			cout << endl;
-			i--;
 		}
 	}
 	return 0;
